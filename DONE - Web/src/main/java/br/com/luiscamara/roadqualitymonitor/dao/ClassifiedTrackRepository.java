@@ -1,0 +1,16 @@
+package br.com.luiscamara.roadqualitymonitor.dao;
+
+import br.com.luiscamara.roadqualitymonitor.models.ClassifiedTrack;
+import br.com.luiscamara.roadqualitymonitor.models.MapExtent;
+import org.springframework.data.jpa.repository.Query;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ClassifiedTrackRepository extends CrudRepository<ClassifiedTrack, Long> {
+    @Query(value = "SELECT * FROM classified_track ct WHERE (ct.start_position && ST_MakeEnvelope(:longitudeEast, :latitudeSouth, :longitudeWest, :latitudeNorth) OR " +
+                   "ct.end_position && ST_MakeEnvelope(:longitudeEast, :latitudeSouth, :longitudeWest, :latitudeNorth, 4326))",
+           nativeQuery = true)
+    public Iterable<ClassifiedTrack> findInsideExtent(double latitudeNorth, double latitudeSouth, double longitudeEast, double longitudeWest);
+}
