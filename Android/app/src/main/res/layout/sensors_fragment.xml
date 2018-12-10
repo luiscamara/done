@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.luiscamara.roadqualitymonitor.ui.fragments.SensorsFragment">
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/sensor_graph"
+        android:layout_width="match_parent"
+        android:layout_height="250sp"
+        android:layout_margin="10dp" />
+
+    <EditText
+        android:id="@+id/debugText"
+        android:layout_width="391dp"
+        android:layout_height="342dp"
+        android:layout_below="@+id/sensor_graph"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="0dp"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+</RelativeLayout>

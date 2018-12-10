@@ -1,1 +1,5 @@
 DataExtractor/target/
+Android/.gradle/
+Android/app/build/
+Android/.idea/
+Android/app/release/

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Road Quality Monitor</string>
+    <string name="selected_fragment">selectedFragment</string>
+    <string name="sharedprefs">onaprefs</string>
+    <string name="current_latitude">curlat</string>
+    <string name="current_longitude">curlong</string>
+    <string name="map_zoom">mapZoom</string>
+    <string name="isLockedToPosition">isLockedToPosition</string>
+    <string name="map_position_X">mapPosX</string>
+    <string name="map_position_Y">mapPosY</string>
+    <string name="device_registered">isDeviceRegistered</string>
+    <string name="number_executions">numExecutions</string>
+    <string name="action_map">Mapa</string>
+    <string name="action_sensors">Sensores</string>
+    <string name="action_options">Opções</string>
+    <string name="action_power">Desligar</string>
+    <string name="automaticDataAcquire">automaticDataAcquire</string>
+    <string name="debugMode">debugMode</string>
+</resources>
